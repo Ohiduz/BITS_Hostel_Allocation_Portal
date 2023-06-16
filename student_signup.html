@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Register</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/bootstrap.js"></script>
+        <script src="./scripts/jquery.js"></script>
+        <script src="./scripts/student_signup.js"></script>
+    </head>
+    <body class="bg-dark-subtle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="./index.html"><img src="./imgs/bits_logo.png" width="60%" alt="logo" class="mt-3"></a>
+                        <div style="color:darkolivegreen;font-size:x-large;font-weight:bolder;">
+                            BITS Hostel Allocation Portal
+                        </div> 
+                    </div>
+                    <br>
+                    <div class="card bg-success-subtle">
+                        <div class="card-header bg-success text-white">
+                            Enter details to register:
+                        </div>
+                        <div class="card-body">
+                            <form id="studentsignupform">
+                                <div class="form-group mb-3">
+                                    <label for="id" class="form-label mb-0">Student ID:</label>
+                                    <input type="text" class="form-control" id="id" name="id" placeholder="E.g., 2021A7PS0001P" style="background-color: #f0f0f0;">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="name" class="form-label mb-0">Full Name:</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="E.g., John Doe" style="background-color: #f0f0f0;">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="gender" class="form-label mb-0">Gender:</label>
+                                    <div class="ms-3 ps-2 py-1 rounded-2" style="background-color: #f0f0f0;">
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        <label for="male">Male</label><br>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        <label for="female">Female</label><br>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="batch" class="form-label mb-0">Batch:</label>
+                                    <div class="ms-3 ps-2 py-1 rounded-2" style="background-color: #f0f0f0;">
+                                        <select name="batch" id="batch">
+                                            <option value="">--Select admission year--</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                        </select>   
+                                    </div>                                   
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="email" class="form-label mb-0">Email address:</label>
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="abc@gmail.com" style="background-color: #f0f0f0;">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="password" class="form-label mb-0">Password:</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Your password" style="background-color: #f0f0f0;">
+                                </div>
+                                <div id="errorMessage" class="text-center mt-3 bg-danger-subtle border border-1 border-danger rounded-2" style="display:none;">
+                                    
+                                </div>
+                                <div id="successMessage" class="text-center mt-3 bg-info-subtle border border-1 border-info rounded-2" style="display:none">
+                                    
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button type="submit" class="btn btn-primary" id="sbmtregister">Register</button>
+                                </div>
+                            </form>
+                            <div class="text-center mt-2">
+                                Already registered? 
+                                <a href="./student_login.html">Proceed to login</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

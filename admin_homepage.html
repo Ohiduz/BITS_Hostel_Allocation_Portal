@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Homepage</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/bootstrap.js"></script>
+        <script src="./scripts/jquery.js"></script>
+        <script src="./scripts/admin_homepage.js"></script>
+        <style>
+            #tblsencap td{border-radius: 8%; background-color: #007070;}
+        </style>
+    </head>
+    <body class="bg-dark-subtle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="./index.html"><img src="./imgs/bits_logo.png" width="60%" alt="logo" class="mt-3"></a>
+                        <div style="color:darkolivegreen;font-size:x-large;font-weight:bolder;">
+                            BITS Hostel Allocation Portal
+                        </div> 
+                    </div>
+                    <br>
+                    <div class="card bg-success-subtle">
+                        <div class="card-header bg-success text-white">
+                            <div class="d-md-inline-flex" id="stdcount">
+                                Students <br> 
+                            </div>
+                            <div class="d-md-inline-flex float-end" id="hstcount">
+                                Hostels <br> 
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <button class="btn btn-sm btn-outline-success" id="vhst">
+                                    View Hostels
+                                </button>
+                                <button class="btn btn-sm btn-outline-success" id="valc">
+                                    View Allocation Details
+                                </button>
+                                <button class="btn btn-sm btn-outline-success" id="vfr">
+                                    View Free rooms
+                                </button>
+                                <button class="btn btn-sm btn-outline-success" id="vw">
+                                    View Wingies
+                                </button>
+                            </div>
+                            <div id="tblsencap">
+                                <div id="vhstdiv" style="display: none;">
+                                    <table id="vhsttbl" class="table table-striped-columns table-hover mt-5" style="color:azure;">
+                                        <tr>
+                                            <td class="text-bg-info">
+                                                Hostel Id 
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Hostel Name
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Gender 
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="valcdiv" style="display: none;">
+                                    <table id="valctbl" class="table table-striped-columns table-hover mt-5" style="color:azure;">
+                                        <tr>
+                                            <td class="text-bg-info">
+                                                Student Id 
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Hostel Name
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Room No. 
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="vfrdiv" style="display: none;">
+                                    <table id="vfrtbl" class="table table-striped-columns table-hover mt-5" style="color:azure;">
+                                        <tr>
+                                            <td class="text-bg-info">
+                                                Room No. 
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Hostel Name
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Wing Id
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="vwdiv" style="display: none;">
+                                    <table id="vwtbl" class="table table-striped-columns table-hover mt-5" style="color:azure;">
+                                        <tr>
+                                            <td class="text-bg-info">
+                                                Hostel Name
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Wing Id
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Room No.
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Student Id
+                                            </td>
+                                            <td class="text-bg-info">
+                                                Student Name
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="mt-5 text-center mb-0">
+                                <button class="btn btn-sm btn-link text-bg-dark" id="addroom">
+                                    Add room
+                                </button>
+                                <button class="btn btn-sm btn-link text-bg-dark" id="removeroom">
+                                    Remove room
+                                </button>
+                                <button class="btn btn-sm btn-link text-bg-dark" id="updateroom">
+                                    Update room status
+                                </button>
+                                <button class="btn btn-sm btn-link text-bg-dark" id="viewhwa">
+                                    View hostelwise allocation
+                                </button>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-sm btn-outline-danger mt-3" id="lgout">
+                                    Logout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

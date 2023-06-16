@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>View Hostelwise Allocation</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/bootstrap.js"></script>
+        <script src="./scripts/jquery.js"></script>
+        <script src="./scripts/viewhwa.js"></script>
+        <style>
+            #vhwatbl td{border-radius: 8%; background-color: #007070;}
+        </style>
+    </head>
+    <body class="bg-dark-subtle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="./index.html"><img src="./imgs/bits_logo.png" width="60%" alt="logo" class="mt-3"></a>
+                        <div style="color:darkolivegreen;font-size:x-large;font-weight:bolder;">
+                            BITS Hostel Allocation Portal
+                        </div> 
+                    </div>
+                    <br>
+                    <div class="card bg-success-subtle">
+                        <div class="card-header bg-success text-white">
+                            <div class="d-md-inline-flex" id="stdcount">
+                                Students <br> 
+                            </div>
+                            <div class="d-md-inline-flex float-end" id="hstcount">
+                                Hostels <br> 
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <form id="viewhwaform">
+                                    <div class="form-group mb-3">
+                                        <label for="hostel" class="form-label mb-0">Select hostel to see allocation details:</label>
+                                        <div class="ms-3 ps-2 py-1 rounded-2" style="background-color: #f0f0f0;">
+                                            <select name="hostel" id="hostel">
+                                                <option value="">--Select hostel--</option>
+                                                <option value="1">Ram</option>
+                                                <option value="2">Budh</option>
+                                                <option value="3">Krishna</option>
+                                                <option value="4">Gandhi</option>
+                                                <option value="5">Shankar</option>
+                                                <option value="6">Vyas</option>
+                                                <option value="7">SR</option>
+                                                <option value="8">Vishwakarma</option>
+                                                <option value="9">Bhagirath</option>
+                                                <option value="10">Ashok</option>
+                                                <option value="11">Rana Pratap</option>
+                                                <option value="12">CVR</option>
+                                                <option value="13">Malviya</option>
+                                                <option value="14">Meera</option>
+                                            </select>   
+                                        </div>                                   
+                                    </div>
+                                    <div id="errorMessage" class="text-center mt-3 bg-danger-subtle border border-1 border-danger rounded-2" style="display:none">
+                                        
+                                    </div>
+                                    <div id="successMessage" class="text-center mt-3 bg-info-subtle border border-1 border-info rounded-2" style="display:none">
+                                        
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <button type="submit" class="btn btn-primary" id="sbmtvhwa">View allocation</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="vhwadiv" style="display: none;">
+                                <table id="vhwatbl" class="table table-striped-columns table-hover mt-5" style="color:azure;">
+                                    <tr id="hdline">    
+                                        <td class="text-bg-info">
+                                            Room No.
+                                        </td>
+                                        <td class="text-bg-info">
+                                            Student Id
+                                        </td>
+                                        <td class="text-bg-info">
+                                            Student Name
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-secondary" id="homebtn">
+                                    Back to homepage
+                                </button>
+                                <button class="btn btn-outline-danger" id="lgout">
+                                    Logout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
